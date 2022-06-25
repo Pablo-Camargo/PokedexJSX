@@ -60,7 +60,7 @@ export const Pokedex: React.FC<PokedexProps> = () => {
 
                                         <Typography
                                             gutterBottom
-                                            variant="h1"
+                                            variant="h4"
                                             component="div"
                                         >
                                             {poke.name}
