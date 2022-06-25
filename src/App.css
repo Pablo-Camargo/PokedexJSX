@@ -44,7 +44,7 @@
     background-color: var(--cor-poison) !important;
 }
 
-.psychi {
+.psychic {
     background-color: var(--cor-psychic) !important;
 }
 
@@ -101,7 +101,7 @@
     background-color: var(--cor-bg-poison) !important;
 }
 
-.psychi-bg {
+.psychic-bg {
     background-color: var(--cor-bg-psychic) !important;
 }
 
@@ -160,6 +160,12 @@
 .App-logo {
     height: 40vmin;
     pointer-events: none;
+}
+.card-pok {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row-reverse;
 }
 
 @media (prefers-reduced-motion: no-preference) {

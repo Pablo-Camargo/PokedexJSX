@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { listPokemon } from "../hooks/useFetch";
 import { PokemonDetails } from "../hooks/interfaces/PokemonDetails";
 
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-import Grid from "@mui/material/Grid";
+import {
+    Card,
+    CardContent,
+    Typography,
+    Chip,
+    Stack,
+    Grid,
+} from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 
@@ -44,7 +45,7 @@ export const Pokedex: React.FC<PokedexProps> = () => {
                                 key={poke.name}
                                 onClick={() => hendleClick(poke.name)}
                             >
-                                <div className="">
+                                <div className="card-pok">
                                     <CardContent>
                                         <CardMedia
                                             width="55%"
@@ -65,20 +66,20 @@ export const Pokedex: React.FC<PokedexProps> = () => {
                                         >
                                             {poke.name}
                                         </Typography>
+                                        <Stack direction="row" spacing={1}>
+                                            {poke.types.map((type) => {
+                                                return (
+                                                    <Chip
+                                                        className={
+                                                            type.type.name
+                                                        }
+                                                        label={type.type.name}
+                                                    />
+                                                );
+                                            })}
+                                        </Stack>
                                     </CardContent>
                                 </div>
-                                <CardContent>
-                                    <Stack direction="row" spacing={1}>
-                                        {poke.types.map((type) => {
-                                            return (
-                                                <Chip
-                                                    className={type.type.name}
-                                                    label={type.type.name}
-                                                />
-                                            );
-                                        })}
-                                    </Stack>
-                                </CardContent>
                             </Card>
                         </div>
                     </Grid>
