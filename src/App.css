@@ -1,38 +1,193 @@
+:root {
+    --cor-bug: #8cb230;
+    --cor-dark: #58575f;
+    --cor-dragon: #0f6ac0;
+    --cor-electric: #eed535;
+    --cor-fairy: #ed6ec7;
+    --cor-fighting: #d04164;
+    --cor-fire: #fd7d24;
+    --cor-flying: #748fc9;
+    --cor-ghost: #556aae;
+    --cor-grass: #62b957;
+    --cor-ground: #dd7748;
+    --cor-ice: #61cec0;
+    --cor-normal: #9da0aa;
+    --cor-poison: #a552cc;
+    --cor-psychic: #ea5d60;
+    --cor-rock: #baab82;
+    --cor-steel: #417d9a;
+    --cor-water: #4a90da;
+
+    --cor-bg-bug: #8bd674;
+    --cor-bg-dark: #6f6e78;
+    --cor-bg-dragon: #7383b9;
+    --cor-bg-electric: #f2cb55;
+    --cor-bg-fairy: #eba8c3;
+    --cor-bg-fighting: #eb4971;
+    --cor-bg-fire: #ffa756;
+    --cor-bg-flying: #83a2e3;
+    --cor-bg-ghost: #8571be;
+    --cor-bg-grass: #8bbe8a;
+    --cor-bg-ground: #f78551;
+    --cor-bg-ice: #91d8df;
+    --cor-bg-normal: #b5b9c4;
+    --cor-bg-poison: #9f6e97;
+    --cor-bg-psychic: #ff6568;
+    --cor-bg-rock: #d4c294;
+    --cor-bg-steel: #4c91b2;
+    --cor-bg-water: #58abf6;
+}
+.normal {
+    background-color: var(--cor-normal) !important;
+}
+.poison {
+    background-color: var(--cor-poison) !important;
+}
+
+.psychi {
+    background-color: var(--cor-psychic) !important;
+}
+
+.grass {
+    background-color: var(--cor-grass) !important;
+}
+.ground {
+    background-color: var(--cor-ground) !important;
+}
+.ice {
+    background-color: var(--cor-ice) !important;
+}
+.fire {
+    background-color: var(--cor-fire) !important;
+}
+.rock {
+    background-color: var(--cor-rock) !important;
+}
+.dragon {
+    background-color: var(--cor-dragon) !important;
+}
+.water {
+    background-color: var(--cor-water) !important;
+}
+.bug {
+    background-color: var(--cor-bug) !important;
+}
+.dark {
+    background-color: var(--cor-dark) !important;
+}
+.fighting {
+    background-color: var(--cor-fighting) !important;
+}
+.ghost {
+    background-color: var(--cor-ghost) !important;
+}
+.steel {
+    background-color: var(--cor-steel) !important;
+}
+.flying {
+    background-color: var(--cor-flying) !important;
+}
+.electric {
+    background-color: var(--cor-electric) !important;
+}
+.fairy {
+    background-color: var(--cor-fairy) !important;
+}
+
+.normal-bg {
+    background-color: var(--cor-bg-normal) !important;
+}
+.poison-bg {
+    background-color: var(--cor-bg-poison) !important;
+}
+
+.psychi-bg {
+    background-color: var(--cor-bg-psychic) !important;
+}
+
+.grass-bg {
+    background-color: var(--cor-bg-grass) !important;
+}
+.ground-bg {
+    background-color: var(--cor-bg-ground) !important;
+}
+.ice-bg {
+    background-color: var(--cor-bg-ice) !important;
+}
+.fire-bg {
+    background-color: var(--cor-bg-fire) !important;
+}
+.rock-bg {
+    background-color: var(--cor-bg-rock) !important;
+}
+.dragon-bg {
+    background-color: var(--cor-bg-dragon) !important;
+}
+.water-bg {
+    background-color: var(--cor-bg-water) !important;
+}
+.bug-bg {
+    background-color: var(--cor-bg-bug) !important;
+}
+.dark-bg {
+    background-color: var(--cor-bg-dark) !important;
+}
+.fighting-bg {
+    background-color: var(--cor-bg-fighting) !important;
+}
+.ghost-bg {
+    background-color: var(--cor-bg-ghost) !important;
+}
+.steel-bg {
+    background-color: var(--cor-bg-steel) !important;
+}
+.flying-bg {
+    background-color: var(--cor-bg-flying) !important;
+}
+.electric-bg {
+    background-color: var(--cor-bg-electric) !important;
+}
+.fairy-bg {
+    background-color: var(--cor-bg-fairy) !important;
+}
+.chip-clip {
+    color: #fff !important;
+}
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
