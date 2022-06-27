@@ -8,15 +8,14 @@ import Container from "@mui/material/Container";
 function App() {
     return (
         <>
-            <NavBar />
-
-            <Container>
-                <Box mt={2}>
-                    <BrowserRouter>
+            <BrowserRouter>
+                <NavBar />
+                <Container>
+                    <Box mt={2}>
                         <AppRoutes />
-                    </BrowserRouter>
-                </Box>
-            </Container>
+                    </Box>
+                </Container>
+            </BrowserRouter>
         </>
     );
 }

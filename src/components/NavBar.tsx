@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, ChangeEvent, useEffect } from "react";
 import { styled, alpha } from "@mui/material/styles";
 import {
     AppBar,
@@ -8,7 +8,11 @@ import {
     Typography,
     InputBase,
 } from "@mui/material/";
-
+import { listAllPokemon } from "../hooks/getAllPokemons";
+import { PokemonDetails } from "../hooks/interfaces/PokemonDetails";
+import MenuIcon from "@mui/icons-material/Menu";
+import SearchIcon from "@mui/icons-material/Search";
+import { useNavigate } from "react-router-dom";
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -40,10 +44,38 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         },
     },
 }));
+const SearchIconWrapper = styled("div")(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+}));
 
 interface NavBarProps {}
 
 export const NavBar: React.FC<NavBarProps> = () => {
+    const navLink = useNavigate();
+    const [data, setData] = useState<PokemonDetails[]>([]);
+    const [text, setText] = useState<string | null>(null);
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setText(e.target.value);
+    };
+    useEffect(() => {
+        listAllPokemon().then((resp) => setData(resp.results));
+    }, []);
+
+    const buscaPoke = data?.filter((pokemon) =>
+        pokemon.name.startsWith(text ? text : "")
+    );
+
+    function hendleClick(name: string) {
+        navLink(`/pokemon/${name}`);
+        console.log(name);
+    }
+
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
@@ -54,7 +86,9 @@ export const NavBar: React.FC<NavBarProps> = () => {
                         color="inherit"
                         aria-label="open drawer"
                         sx={{ mr: 2 }}
-                    ></IconButton>
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Typography
                         variant="h6"
                         noWrap
@@ -67,11 +101,29 @@ export const NavBar: React.FC<NavBarProps> = () => {
                         MUI
                     </Typography>
                     <Search>
+                        <SearchIconWrapper>
+                            <SearchIcon />
+                        </SearchIconWrapper>
                         <StyledInputBase
                             placeholder="Search…"
                             inputProps={{ "aria-label": "search" }}
+                            type="text"
+                            value={text}
+                            onChange={handleChange}
                         />
                     </Search>
+                    <ul>
+                        {buscaPoke?.map((poke) => {
+                            if (text != null || text !== "") {
+                                return (
+                                    <li onClick={() => hendleClick(poke.name)}>
+                                        {" "}
+                                        {poke.name ? poke.name : ""}
+                                    </li>
+                                );
+                            }
+                        })}
+                    </ul>
                 </Toolbar>
             </AppBar>
         </Box>
