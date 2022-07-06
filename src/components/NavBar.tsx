@@ -114,10 +114,9 @@ export const NavBar: React.FC<NavBarProps> = () => {
                     </Search>
                     <ul>
                         {buscaPoke?.map((poke) => {
-                            if (text != null || text !== "") {
+                            if (text === poke.name && text !== "") {
                                 return (
                                     <li onClick={() => hendleClick(poke.name)}>
-                                        {" "}
                                         {poke.name ? poke.name : ""}
                                     </li>
                                 );

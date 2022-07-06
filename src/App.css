@@ -40,58 +40,201 @@
 .normal {
     background-color: var(--cor-normal) !important;
 }
+.icon-normal {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typNormal.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .poison {
     background-color: var(--cor-poison) !important;
 }
-
+.icon-poison {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typPoison.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .psychic {
     background-color: var(--cor-psychic) !important;
+}
+.icon-psychic {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typPsychic.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
 }
 
 .grass {
     background-color: var(--cor-grass) !important;
 }
+.icon-grass {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typGras.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .ground {
     background-color: var(--cor-ground) !important;
+}
+.icon-ground {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typGround.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
 }
 .ice {
     background-color: var(--cor-ice) !important;
 }
+.icon-ice {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typIce.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .fire {
     background-color: var(--cor-fire) !important;
+}
+.icon-fire {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typFire.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
 }
 .rock {
     background-color: var(--cor-rock) !important;
 }
+.icon-rock {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typRock.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .dragon {
     background-color: var(--cor-dragon) !important;
+}
+.icon-dragon {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typDragon.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
 }
 .water {
     background-color: var(--cor-water) !important;
 }
+.icon-water {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typWater.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .bug {
     background-color: var(--cor-bug) !important;
+}
+.icon-bug {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typBug.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
 }
 .dark {
     background-color: var(--cor-dark) !important;
 }
+.icon-dark {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typDark.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .fighting {
     background-color: var(--cor-fighting) !important;
+}
+.icon-fighting {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typFighting.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
 }
 .ghost {
     background-color: var(--cor-ghost) !important;
 }
+.icon-ghost {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typGhost.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .steel {
     background-color: var(--cor-steel) !important;
+}
+.icon-steel {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typSteel.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
 }
 .flying {
     background-color: var(--cor-flying) !important;
 }
+.icon-flying {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typFlying.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .electric {
     background-color: var(--cor-electric) !important;
 }
+.icon-electric {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typElectric.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
 .fairy {
     background-color: var(--cor-fairy) !important;
+}
+.icon-fairy {
+    height: 20px;
+    width: 20px;
+    background-image: url("../src/img/typFairy.png");
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
 }
 
 .normal-bg {
@@ -188,7 +331,21 @@
 .App-link {
     color: #61dafb;
 }
+.img-fund {
+    background-image: url("../src/img/Pokeball.png");
+    background-repeat: no-repeat;
+    width: 100px !important;
+    height: 100px !important;
+}
+.poke {
+    position: relative;
+}
+.absolute {
+    position: absolute;
 
+    left: 269px;
+    top: 0;
+}
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);

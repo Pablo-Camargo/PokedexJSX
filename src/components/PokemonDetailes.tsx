@@ -6,7 +6,7 @@ import { getPokemonDetails } from "../hooks/getPokemonsDetails";
 import { lorePokemon } from "../hooks/getLorePokemon";
 import { useParams } from "react-router-dom";
 
-import { Grid, Box, Paper } from "@mui/material/";
+import { Grid, Box, Paper, Chip, Stack } from "@mui/material/";
 
 interface PokemonDetailesProps {}
 
@@ -63,7 +63,41 @@ export const PokemonDetailes: React.FC<PokemonDetailesProps> = () => {
             </div>
             <div>
                 <h2>{name} </h2>
+                <Stack direction="row" spacing={1}>
+                    {selectedPokemonDetails?.types.map((types) => {
+                        return (
+                            <Chip
+                                icon={
+                                    <div
+                                        className={
+                                            "icon-" + `${types.type.name}`
+                                        }
+                                    ></div>
+                                }
+                                className={types.type.name}
+                                label={types.type.name}
+                            />
+                        );
+                    })}
+                </Stack>
                 <p>{data?.flavor_text_entries[0].flavor_text}</p>
+                <ul>
+                    <li>
+                        <span>height</span>
+                        {selectedPokemonDetails?.height}
+                    </li>
+                    <li>
+                        <span>weight</span>
+                        {selectedPokemonDetails?.weight}
+                    </li>
+
+                    <li>
+                        <span>Abilits</span>
+                        {selectedPokemonDetails?.abilities.map((a) => {
+                            return a.ability.name;
+                        })}
+                    </li>
+                </ul>
             </div>
         </Box>
     );
