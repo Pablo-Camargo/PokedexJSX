@@ -6,7 +6,7 @@ import { getPokemonDetails } from "../hooks/getPokemonsDetails";
 import { lorePokemon } from "../hooks/getLorePokemon";
 import { useParams } from "react-router-dom";
 
-import { Grid, Box, Paper, Chip, Stack } from "@mui/material/";
+import { Chip, Stack, Card, CardMedia, CardContent, Box } from "@mui/material/";
 
 interface PokemonDetailesProps {}
 
@@ -36,7 +36,6 @@ export const PokemonDetailes: React.FC<PokemonDetailesProps> = () => {
     );
 
     let frist = pokeTypes?.[0];
-    console.log(frist);
 
     return (
         <Box
@@ -49,26 +48,37 @@ export const PokemonDetailes: React.FC<PokemonDetailesProps> = () => {
                 alignItems: "center",
             }}
         >
-            <div className={`${frist}` + "-bg"}>
-                <img
-                    src={
-                        selectedPokemonDetails?.sprites.other?.[
-                            "official-artwork"
-                        ].front_default
-                    }
-                    alt=""
-                />
-                <ul>
-                    {selectedPokemonDetails?.stats.map((base) => {
-                        return (
-                            <li key={base.stat.name}>
-                                <span>{base.stat.name}</span>
-                                <span>{base.base_stat}</span>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </div>
+            <Card className={`${frist}` + "-bg"}>
+                <CardContent className="paddings">
+                    <div className="poke-bola-back">
+                        <CardMedia
+                            width="50%"
+                            component="img"
+                            height="50%"
+                            image={
+                                selectedPokemonDetails?.sprites.other?.[
+                                    "official-artwork"
+                                ].front_default
+                            }
+                            sx={{
+                                position: "relative",
+                            }}
+                            alt={selectedPokemonDetails?.name}
+                        />
+                    </div>
+
+                    <ul>
+                        {selectedPokemonDetails?.stats.map((base) => {
+                            return (
+                                <li key={base.stat.name}>
+                                    <span>{base.stat.name}</span>
+                                    <span>{base.base_stat}</span>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </CardContent>
+            </Card>
             <div>
                 <h2>{name} </h2>
                 <Stack direction="row" spacing={1}>
