@@ -29,6 +29,14 @@ export const PokemonDetailes: React.FC<PokemonDetailesProps> = () => {
         if (!name) return;
         getPokemonDetails(name).then((resp) => setSelectedPokemonDetail(resp));
     }, [name]);
+    const pokeTypes: string[] | undefined = selectedPokemonDetails?.types.map(
+        (type) => {
+            return type.type.name;
+        }
+    );
+
+    let frist = pokeTypes?.[0];
+    console.log(frist);
 
     return (
         <Box
@@ -41,7 +49,7 @@ export const PokemonDetailes: React.FC<PokemonDetailesProps> = () => {
                 alignItems: "center",
             }}
         >
-            <div>
+            <div className={`${frist}` + "-bg"}>
                 <img
                     src={
                         selectedPokemonDetails?.sprites.other?.[

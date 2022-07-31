@@ -10,7 +10,7 @@ import {
     Chip,
     Grid,
     CardMedia,
-    Stack,
+    IconButton,
 } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
@@ -35,8 +35,8 @@ export const Pokedex: React.FC<PokedexProps> = () => {
         <>
             <Grid
                 container
-                rowSpacing={3}
-                columnSpacing={{ xs: 3, sm: 3, md: 3 }}
+                spacing={{ xs: 2, md: 3 }}
+                columns={{ xs: 4, sm: 8, md: 12 }}
             >
                 {data?.map((poke) => {
                     const pokeTypes: string[] = poke.types.map((type) => {
@@ -45,7 +45,7 @@ export const Pokedex: React.FC<PokedexProps> = () => {
                     var primeiro = pokeTypes[0];
 
                     return (
-                        <Grid item xs={4}>
+                        <Grid item xs={2} sm={4} md={4}>
                             <div>
                                 <Card
                                     className={`${primeiro}` + "-bg"}
@@ -53,17 +53,11 @@ export const Pokedex: React.FC<PokedexProps> = () => {
                                     onClick={() => hendleClick(poke.name)}
                                 >
                                     <div className="card-pok poke ">
-                                        <CardContent>
-                                            <div className="">
+                                        <CardContent className="paddings">
+                                            <div className="id-pokemon">
                                                 <span>{poke.id}</span>
-                                                <div className="absolute">
-                                                    <CardMedia
-                                                        className="img-fund"
-                                                        alt=""
-                                                        component="img"
-                                                    />
-                                                </div>
-
+                                            </div>
+                                            <div className="poke-bola-back">
                                                 <CardMedia
                                                     width="55%"
                                                     component="img"
@@ -83,32 +77,42 @@ export const Pokedex: React.FC<PokedexProps> = () => {
                                             <Typography
                                                 gutterBottom
                                                 variant="h4"
-                                                component="div"
+                                                component="h4"
                                             >
-                                                {poke.name}
+                                                {poke.name[0].toUpperCase() +
+                                                    poke.name.substring(1)}
                                             </Typography>
-                                            <Stack direction="row" spacing={1}>
+
+                                            <Grid
+                                                container
+                                                spacing={2}
+                                                className="no-margings"
+                                            >
                                                 {poke.types.map((type) => {
                                                     return (
-                                                        <Chip
-                                                            icon={
-                                                                <div
-                                                                    className={
-                                                                        "icon-" +
-                                                                        `${type.type.name}`
-                                                                    }
-                                                                ></div>
-                                                            }
-                                                            className={
-                                                                type.type.name
-                                                            }
-                                                            label={
-                                                                type.type.name
-                                                            }
-                                                        />
+                                                        <Grid xs={6}>
+                                                            <Chip
+                                                                icon={
+                                                                    <div
+                                                                        className={
+                                                                            "icon-" +
+                                                                            `${type.type.name}`
+                                                                        }
+                                                                    ></div>
+                                                                }
+                                                                className={
+                                                                    type.type
+                                                                        .name
+                                                                }
+                                                                label={
+                                                                    type.type
+                                                                        .name
+                                                                }
+                                                            />
+                                                        </Grid>
                                                     );
                                                 })}
-                                            </Stack>
+                                            </Grid>
                                         </CardContent>
                                     </div>
                                 </Card>

@@ -1,3 +1,6 @@
+html {
+    font-size: 82.5%; /* 62.5% de 16px = 10px */
+}
 :root {
     --cor-bug: #8cb230;
     --cor-dark: #58575f;
@@ -39,6 +42,7 @@
 }
 .normal {
     background-color: var(--cor-normal) !important;
+    color: #fff !important;
 }
 .icon-normal {
     height: 20px;
@@ -50,6 +54,7 @@
 }
 .poison {
     background-color: var(--cor-poison) !important;
+    color: #fff !important;
 }
 .icon-poison {
     height: 20px;
@@ -61,6 +66,7 @@
 }
 .psychic {
     background-color: var(--cor-psychic) !important;
+    color: #fff !important;
 }
 .icon-psychic {
     height: 20px;
@@ -73,6 +79,7 @@
 
 .grass {
     background-color: var(--cor-grass) !important;
+    color: #fff !important;
 }
 .icon-grass {
     height: 20px;
@@ -84,6 +91,7 @@
 }
 .ground {
     background-color: var(--cor-ground) !important;
+    color: #fff !important;
 }
 .icon-ground {
     height: 20px;
@@ -95,6 +103,7 @@
 }
 .ice {
     background-color: var(--cor-ice) !important;
+    color: #fff !important;
 }
 .icon-ice {
     height: 20px;
@@ -106,6 +115,7 @@
 }
 .fire {
     background-color: var(--cor-fire) !important;
+    color: #fff !important;
 }
 .icon-fire {
     height: 20px;
@@ -117,6 +127,7 @@
 }
 .rock {
     background-color: var(--cor-rock) !important;
+    color: #fff !important;
 }
 .icon-rock {
     height: 20px;
@@ -128,6 +139,7 @@
 }
 .dragon {
     background-color: var(--cor-dragon) !important;
+    color: #fff !important;
 }
 .icon-dragon {
     height: 20px;
@@ -139,6 +151,7 @@
 }
 .water {
     background-color: var(--cor-water) !important;
+    color: #fff !important;
 }
 .icon-water {
     height: 20px;
@@ -150,6 +163,7 @@
 }
 .bug {
     background-color: var(--cor-bug) !important;
+    color: #fff !important;
 }
 .icon-bug {
     height: 20px;
@@ -161,6 +175,7 @@
 }
 .dark {
     background-color: var(--cor-dark) !important;
+    color: #fff !important;
 }
 .icon-dark {
     height: 20px;
@@ -172,6 +187,7 @@
 }
 .fighting {
     background-color: var(--cor-fighting) !important;
+    color: #fff !important;
 }
 .icon-fighting {
     height: 20px;
@@ -183,6 +199,7 @@
 }
 .ghost {
     background-color: var(--cor-ghost) !important;
+    color: #fff !important;
 }
 .icon-ghost {
     height: 20px;
@@ -194,6 +211,7 @@
 }
 .steel {
     background-color: var(--cor-steel) !important;
+    color: #fff !important;
 }
 .icon-steel {
     height: 20px;
@@ -205,6 +223,7 @@
 }
 .flying {
     background-color: var(--cor-flying) !important;
+    color: #fff !important;
 }
 .icon-flying {
     height: 20px;
@@ -216,6 +235,7 @@
 }
 .electric {
     background-color: var(--cor-electric) !important;
+    color: #fff !important;
 }
 .icon-electric {
     height: 20px;
@@ -227,6 +247,7 @@
 }
 .fairy {
     background-color: var(--cor-fairy) !important;
+    color: #fff !important;
 }
 .icon-fairy {
     height: 20px;
@@ -304,12 +325,6 @@
     height: 40vmin;
     pointer-events: none;
 }
-.card-pok {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    flex-direction: row-reverse;
-}
 
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
@@ -346,11 +361,61 @@
     left: 269px;
     top: 0;
 }
+.no-margings {
+    margin: 0 !important;
+    display: flex !important;
+    width: 60% !important;
+}
+.id-pokemon {
+    display: flex;
+
+    color: rgba(0, 0, 0, 0.54);
+
+    padding: 12px;
+    font-size: 1.5rem;
+}
+.poke-bola-back {
+    background-image: url(../src/img/poke.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px 300px;
+}
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
+    }
+}
+@media screen and (max-width: 1100px) {
+    .poke-bola-back {
+        background-size: 220px 220px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .paddings {
+        padding: 9px !important;
+    }
+    .no-margings {
+        margin: 0 !important;
+        display: flex !important;
+        width: 100% !important;
+    }
+    .poke-bola-back {
+        background-size: 220px 220px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .paddings {
+        padding: 9px !important;
+    }
+    .no-margings {
+        margin: 0 !important;
+        display: flex !important;
+        width: 100% !important;
+    }
+    .poke-bola-back {
+        background-size: 120px 120px;
     }
 }
