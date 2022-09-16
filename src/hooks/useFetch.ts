@@ -5,7 +5,6 @@ import { PokemonDetails } from "./interfaces/PokemonDetails";
 export interface PokemonListInterface {
     name: string;
     url: string;
- 
 }
 
 interface ListPokemonsInterface {
@@ -21,7 +20,7 @@ export async function listPokemon(
     const endPoint = `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offSet}`;
     const response = await axios.get<ListPokemonsInterface>(endPoint);
 
-    const promiseArr = response.data.results.map(({ name}) =>
+    const promiseArr = response.data.results.map(({ name }) =>
         getPokemonDetails(name)
     );
     const resultsPromise = await Promise.all(promiseArr);

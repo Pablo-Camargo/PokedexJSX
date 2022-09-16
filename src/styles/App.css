@@ -47,7 +47,7 @@ html {
 .icon-normal {
     height: 20px;
     width: 20px;
-    background-image: url("../src/img/typNormal.png");
+    background-image: url("../img/typNormal.png");
     background-position-x: 100%;
     background-position-y: 50%;
     background-repeat: no-repeat;
@@ -257,6 +257,66 @@ html {
     background-position-y: 50%;
     background-repeat: no-repeat;
 }
+.normal-color {
+    color: var(--cor-bg-normal) !important;
+}
+.poison-color {
+    color: var(--cor-bg-poison) !important;
+}
+
+.psychic-color {
+    color: var(--cor-bg-psychic) !important;
+}
+
+.grass-color {
+    color: var(--cor-bg-grass) !important;
+}
+.ground-color {
+    color: var(--cor-bg-ground) !important;
+}
+.ice-color {
+    color: var(--cor-bg-ice) !important;
+}
+.fire-color {
+    color: var(--cor-bg-fire) !important;
+}
+.rock-color {
+    color: var(--cor-bg-rock) !important;
+}
+.dragon-color {
+    color: var(--cor-bg-dragon) !important;
+}
+.water-color {
+    color: var(--cor-bg-water) !important;
+}
+.bug-color {
+    color: var(--cor-bg-bug) !important;
+}
+.dark-color {
+    color: var(--cor-bg-dark) !important;
+}
+.fighting-color {
+    color: var(--cor-bg-fighting) !important;
+}
+.ghost-color {
+    color: var(--cor-bg-ghost) !important;
+}
+.steel-color {
+    color: var(--cor-bg-steel) !important;
+}
+.flying-color {
+    color: var(--cor-bg-flying) !important;
+}
+.electric-color {
+    color: var(--cor-bg-electric) !important;
+}
+.fairy-color {
+    color: var(--cor-bg-fairy) !important;
+}
+.css-14pt78w-MuiSlider-rail {
+    background-color: #c7c5c5 !important;
+    opacity: 0.5;
+}
 
 .normal-bg {
     background-color: var(--cor-bg-normal) !important;
@@ -325,6 +385,10 @@ html {
     height: 40vmin;
     pointer-events: none;
 }
+.info-status {
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+}
 
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
@@ -380,6 +444,43 @@ html {
     background-position: center;
     background-size: 300px 300px;
 }
+.MuiSlider-thumbColorPrimary.MuiSlider-thumbSizeMedium.MuiSlider-thumb.css-eg0mwd-MuiSlider-thumb,
+.css-eg0mwd-MuiSlider-thumb:before {
+    display: contents !important;
+}
+.css-19xmp72-MuiSlider-root.Mui-disabled {
+    padding: 0 !important;
+}
+.css-2s90m6-MuiAvatar-root {
+    background-color: transparent !important;
+}
+.css-2s90m6-MuiAvatar-root {
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+.css-tlelie-MuiListItemText-root {
+    margin: 0 !important;
+}
+
+.css-10hburv-MuiTypography-root {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.css-cveggr-MuiListItemIcon-root {
+    min-width: 0px !important;
+}
+.css-2s90m6-MuiAvatar-root {
+    border-radius: 0 !important;
+    color: #000 !important;
+    width: 100% !important;
+    height: auto !important;
+
+    font-size: 1.25rem !important;
+}
+.info-status {
+    padding: 0 20px;
+}
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -416,6 +517,6 @@ html {
         width: 100% !important;
     }
     .poke-bola-back {
-        background-size: 120px 120px;
+        background-size: 300px 300px;
     }
 }

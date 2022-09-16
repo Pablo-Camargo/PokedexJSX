@@ -1,8 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
-import Pokedex from "../components/Pokedex";
-import PokemonDetailes from "../components/PokemonDetailes";
-
+import Pokedex from "../components/Pokedex/Pokedex";
+import PokemonDetailes from "../components/PokemonDetailes/PokemonDetailes";
 
 export const AppRoutes = () => {
     return (
